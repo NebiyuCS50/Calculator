@@ -48,7 +48,7 @@ button{
 }
 .inp{
     align-self:flex-end;
-    border: 2px red solid;
+    /* border: 2px red solid; */
     height: 120px;
     margin-right:4px;
     margin-top: 4px;
@@ -59,4 +59,26 @@ button{
 }
 .first{
     height: 55px;
+}
+.clr{
+    color:rgba(215, 31, 53, 0.8);
+    width: 80px;
+    margin-left: 2px;
+    margin-top: 2px;
+    font-size: 15px;
+    box-shadow: none;
+    padding: 0;
+    text-align: left;
+    margin-left: 5px;
+    
+}
+.dot{
+    background-color: rgba(92, 89, 83, 0.8);
+    color: white;
+    font-size: 15px;
+}
+.answer{
+    background-color: rgba(210, 163, 53, 0.8);
+    color: white;
+    font-size: 15px;
 }
