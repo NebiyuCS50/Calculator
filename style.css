@@ -82,3 +82,16 @@ button{
     color: white;
     font-size: 15px;
 }
+.input{
+    margin-top: 20px;
+    height: 50px;
+}
+.input_2{
+    height: 20px;
+}
+p{
+    margin-top: -20px;
+    border: 2px solid rgba(92, 89, 83, 0.8);
+    width: 150px;
+    text-align: right;
+}
