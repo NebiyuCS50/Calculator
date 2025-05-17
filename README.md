@@ -6,7 +6,6 @@ A simple and responsive calculator built using HTML, CSS, and JavaScript. It per
 
 - Basic arithmetic operations: +, −, ×, ÷
 - Clear/reset button
-- Keyboard support
 - Clean and minimal design
 
 # 🛠️ Tech Stack
