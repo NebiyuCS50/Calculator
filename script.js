@@ -1,18 +1,22 @@
 function add(numFirst, numSecond) {
   result = parseFloat(numFirst) + parseFloat(numSecond);
-  return result.toFixed(7);
+  return result;
 }
 function subtract(numFirst, numSecond) {
   result = parseFloat(numFirst) - parseFloat(numSecond);
-  return result.toFixed(7);
+  return result;
 }
 function multiply(numFirst, numSecond) {
   result = parseFloat(numFirst) * parseFloat(numSecond);
-  return result.toFixed(7);
+  return result;
 }
 function divide(numFirst, numSecond) {
   result = parseFloat(numFirst) / parseFloat(numSecond);
   return result.toFixed(7);
+}
+function percentage(numFirst, numSecond) {
+  result = parseFloat(numFirst) / numSecond;
+  return result;
 }
 
 function operate(num1, num2, opr) {
@@ -25,6 +29,8 @@ function operate(num1, num2, opr) {
       return multiply(num1, num2);
     case "/":
       return divide(num1, num2);
+    case "%":
+      return percentage(num1, num2);
     default:
       return num2;
   }
@@ -62,6 +68,8 @@ operators.forEach((opr) =>
     if (secondNumber !== "") {
       if (secondNumber == "0" && operator == "/") {
         inpSecond.textContent = "Can not divide by zero";
+      } else if (operator == "%") {
+        inpSecond.textContent = "Syntax Error";
       } else {
         firstNumber = operate(firstNumber, secondNumber, operator);
         inpFirst.textContent = firstNumber;
@@ -87,8 +95,15 @@ answer.addEventListener("click", function () {
       operator = "";
       isSecond = false;
     }
-  } else {
-    inpSecond.textContent = "Syntax Error";
+  } else if (operator == "%") {
+    secondNumber = 100;
+    result = operate(firstNumber, secondNumber, operator);
+    inpSecond.textContent = result;
+    firstNumber = "";
+    inpFirst.textContent = "";
+    secondNumber = "";
+    operator = "";
+    isSecond = false;
   }
 });
 
